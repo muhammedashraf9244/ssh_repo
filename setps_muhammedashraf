@@ -1,0 +1,116 @@
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (main)
+$ git branch dev
+
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (main)
+$ git branch test
+
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (main)
+$ git branch
+  dev
+* main
+  test
+
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (main)
+$ git checkout dev
+Switched to branch 'dev'
+
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (dev)
+$ ls -A
+.git/  .gitignore  index.html  README.md  setps_muhammedashraf  style.css
+
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (dev)
+$ git branch -r
+  origin/main
+
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (dev)
+$ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/muhammedashraf9244/ssh_repo
+  Push  URL: https://github.com/muhammedashraf9244/ssh_repo
+  HEAD branch: main
+  Remote branch:
+    main tracked
+  Local ref configured for 'git push':
+    main pushes to main (up to date)
+
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (dev)
+$ touch f1 f2
+
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (dev)
+$ git status
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        f1
+        f2
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (dev)
+$ git add .
+
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (dev)
+$ git commit -m "f1 f2"
+[dev 39c7a87] f1 f2
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 f1
+ create mode 100644 f2
+
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (dev)
+$ git push origin dev
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 234 bytes | 234.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/muhammedashraf9244/ssh_repo/pull/new/dev
+remote:
+To https://github.com/muhammedashraf9244/ssh_repo
+ * [new branch]      dev -> dev
+
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (dev)
+$ git checkout main
+Switched to branch 'main'
+
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (main)
+$ ls -A
+.git/  .gitignore  index.html  README.md  setps_muhammedashraf  style.css
+
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (main)
+$ git merge dev
+Updating 03589eb..39c7a87
+Fast-forward
+ f1 | 0
+ f2 | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 f1
+ create mode 100644 f2
+
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (main)
+$ ls -A
+.git/  .gitignore  f1  f2  index.html  README.md  setps_muhammedashraf  style.css
+
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (main)
+$ git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/muhammedashraf9244/ssh_repo
+   03589eb..39c7a87  main -> main
+
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (main)
+$ git checkout test
+Switched to branch 'test'
+
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (main)
+$ git branch -D test
+Deleted branch test (was 03589eb).
+
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (main)
+$ git branch
+  dev
+* main
+
+Muhammed_Ashraf@Muhammed MINGW64 /e/computer science/ITI_3_Python/GIT/Day 2/ssh_repo (main)
